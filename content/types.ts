@@ -72,6 +72,8 @@ export interface ProcessStep {
   title: string;
   description: string;
   icon: ProcessIcon;
+  whatToExpect?: string[];
+  timeline?: string;
 }
 
 /**
