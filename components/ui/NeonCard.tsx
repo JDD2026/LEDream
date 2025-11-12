@@ -66,7 +66,7 @@ export function NeonCard({
   const variantClasses = {
     blue: "border-neon-blue shadow-neon-blue",
     purple: "border-neon-purple shadow-neon-purple",
-    magenta: "border-neon-magenta",
+    magenta: "border-neon-magenta shadow-neon-magenta",
     green: "border-neon-green shadow-neon-green",
   };
 
