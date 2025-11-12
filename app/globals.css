@@ -269,7 +269,7 @@
 
   /* When animated, combine animations smoothly - animate filter for multicolor */
   .neon-text-multicolor.animate-glow-pulse-slow {
-    animation: gradient-shift 3s ease infinite, glow-pulse-slow-filter 4s ease-in-out infinite;
+    animation: gradient-shift 3s ease infinite, glow-pulse-slow-filter 2s ease-in-out infinite;
     will-change: filter, background-position;
     transform: translateZ(0);
     /* Animation will override the base filter */
@@ -399,7 +399,7 @@
 
   /* Animation Overrides for Neon Text */
   .animate-glow-pulse-slow {
-    animation: glow-pulse-slow 4s ease-in-out infinite !important;
+    animation: glow-pulse-slow 2s ease-in-out infinite !important;
   }
 
   /* Performance Optimizations */

@@ -222,7 +222,7 @@ module.exports = {
         'accordion-up': 'accordion-up 0.2s ease-out',
         'pulse-neon': 'pulse-neon 2s ease-in-out infinite',
         'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
-        'glow-pulse-slow': 'glow-pulse-slow 4s ease-in-out infinite',
+        'glow-pulse-slow': 'glow-pulse-slow 3s ease-in-out infinite',
         'gradient-shift': 'gradient-shift 3s ease infinite',
         'fade-in': 'fade-in 0.5s ease-out',
         'marquee-scroll': 'marquee-scroll 20s linear infinite',
