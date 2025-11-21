@@ -209,7 +209,7 @@ export function HomePageContent() {
             </div>
             
             {/* Image 6 - 10.jpg */}
-            <div className="absolute bottom-[35%] md:bottom-[30%] left-[30%] md:left-[38%] transform rotate-[-6deg] hover:rotate-[-4deg] hover:scale-105 transition-all duration-300 z-25 shadow-2xl cursor-pointer">
+            <div className="absolute bottom-[35%] md:bottom-[30%] left-[25%] md:left-[33%] transform rotate-[-6deg] hover:rotate-[-4deg] hover:scale-105 transition-all duration-300 z-50 shadow-2xl cursor-pointer">
               <img 
                 src="/10.JPG" 
                 alt="LEDream installation" 
@@ -218,7 +218,7 @@ export function HomePageContent() {
             </div>
             
             {/* Image 7 - 11.jpg */}
-            <div className="absolute bottom-[30%] md:bottom-[25%] right-[20%] md:right-[28%] transform rotate-[4deg] hover:rotate-[6deg] hover:scale-105 transition-all duration-300 z-35 shadow-2xl cursor-pointer">
+            <div className="absolute bottom-[30%] md:bottom-[25%] right-[15%] md:right-[23%] transform rotate-[4deg] hover:rotate-[6deg] hover:scale-105 transition-all duration-300 z-35 shadow-2xl cursor-pointer">
               <img 
                 src="/11.JPG" 
                 alt="LEDream installation" 
@@ -227,7 +227,7 @@ export function HomePageContent() {
             </div>
             
             {/* Image 8 - 13.jpg */}
-            <div className="absolute bottom-[25%] md:bottom-[20%] right-0 md:right-[5%] transform rotate-[-7deg] hover:rotate-[-5deg] hover:scale-105 transition-all duration-300 z-45 shadow-2xl cursor-pointer">
+            <div className="absolute bottom-[20%] md:bottom-[15%] right-[3%] md:right-[8%] transform rotate-[-7deg] hover:rotate-[-5deg] hover:scale-105 transition-all duration-300 z-45 shadow-2xl cursor-pointer">
               <img 
                 src="/13.jpg" 
                 alt="LEDream installation" 
