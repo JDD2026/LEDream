@@ -31,6 +31,7 @@ import { TestimonialCard } from "@/components/sections/TestimonialCard";
 import { IconFeature } from "@/components/ui/IconFeature";
 import { VideoEmbed } from "@/components/ui/VideoEmbed";
 import { VideoBackground } from "@/components/ui/VideoBackground";
+import { ImageCarousel } from "@/components/ui/ImageCarousel";
 import {
   heroContent,
   featuredProjects,
@@ -160,81 +161,20 @@ export function HomePageContent() {
           </div>
         </div>
         
-        {/* Image Collage - Tack Board Style */}
-        <div className="mt-16 flex justify-center items-center min-h-[500px] md:min-h-[650px] lg:min-h-[700px] relative px-4">
-          <div className="relative w-full max-w-5xl h-full">
-            {/* Image 1 - 3.jpg */}
-            <div className="absolute top-0 left-0 md:left-[5%] transform rotate-[-8deg] hover:rotate-[-5deg] hover:scale-105 transition-all duration-300 z-10 shadow-2xl cursor-pointer">
-              <img 
-                src="/3.jpg" 
-                alt="LEDream installation" 
-                className="w-40 sm:w-48 md:w-56 lg:w-64 h-auto rounded-sm border-2 border-neutral-white/20 hover:border-neutral-white/40 transition-colors"
-              />
-            </div>
-            
-            {/* Image 2 - 5.jpg */}
-            <div className="absolute top-6 md:top-12 left-[20%] md:left-[28%] transform rotate-[6deg] hover:rotate-[8deg] hover:scale-105 transition-all duration-300 z-20 shadow-2xl cursor-pointer">
-              <img 
-                src="/5.JPG" 
-                alt="LEDream installation" 
-                className="w-40 sm:w-48 md:w-56 lg:w-64 h-auto rounded-sm border-2 border-neutral-white/20 hover:border-neutral-white/40 transition-colors"
-              />
-            </div>
-            
-            {/* Image 3 - 6.jpg */}
-            <div className="absolute top-2 md:top-4 right-[25%] md:right-[32%] transform rotate-[-5deg] hover:rotate-[-3deg] hover:scale-105 transition-all duration-300 z-30 shadow-2xl cursor-pointer">
-              <img 
-                src="/6.JPG" 
-                alt="LEDream installation" 
-                className="w-40 sm:w-48 md:w-56 lg:w-64 h-auto rounded-sm border-2 border-neutral-white/20 hover:border-neutral-white/40 transition-colors"
-              />
-            </div>
-            
-            {/* Image 4 - 7.jpg */}
-            <div className="absolute top-12 md:top-20 right-0 md:right-[8%] transform rotate-[7deg] hover:rotate-[9deg] hover:scale-105 transition-all duration-300 z-40 shadow-2xl cursor-pointer">
-              <img 
-                src="/7.JPG" 
-                alt="LEDream installation" 
-                className="w-40 sm:w-48 md:w-56 lg:w-64 h-auto rounded-sm border-2 border-neutral-white/20 hover:border-neutral-white/40 transition-colors"
-              />
-            </div>
-            
-            {/* Image 5 - 8.jpg */}
-            <div className="absolute bottom-[40%] md:bottom-[35%] left-[5%] md:left-[8%] transform rotate-[5deg] hover:rotate-[7deg] hover:scale-105 transition-all duration-300 z-15 shadow-2xl cursor-pointer">
-              <img 
-                src="/8.JPG" 
-                alt="LEDream installation" 
-                className="w-40 sm:w-48 md:w-56 lg:w-64 h-auto rounded-sm border-2 border-neutral-white/20 hover:border-neutral-white/40 transition-colors"
-              />
-            </div>
-            
-            {/* Image 6 - 10.jpg */}
-            <div className="absolute bottom-[35%] md:bottom-[30%] left-[25%] md:left-[33%] transform rotate-[-6deg] hover:rotate-[-4deg] hover:scale-105 transition-all duration-300 z-50 shadow-2xl cursor-pointer">
-              <img 
-                src="/10.JPG" 
-                alt="LEDream installation" 
-                className="w-40 sm:w-48 md:w-56 lg:w-64 h-auto rounded-sm border-2 border-neutral-white/20 hover:border-neutral-white/40 transition-colors"
-              />
-            </div>
-            
-            {/* Image 7 - 11.jpg */}
-            <div className="absolute bottom-[30%] md:bottom-[25%] right-[15%] md:right-[23%] transform rotate-[4deg] hover:rotate-[6deg] hover:scale-105 transition-all duration-300 z-35 shadow-2xl cursor-pointer">
-              <img 
-                src="/11.JPG" 
-                alt="LEDream installation" 
-                className="w-40 sm:w-48 md:w-56 lg:w-64 h-auto rounded-sm border-2 border-neutral-white/20 hover:border-neutral-white/40 transition-colors"
-              />
-            </div>
-            
-            {/* Image 8 - 13.jpg */}
-            <div className="absolute bottom-[20%] md:bottom-[15%] right-[3%] md:right-[8%] transform rotate-[-7deg] hover:rotate-[-5deg] hover:scale-105 transition-all duration-300 z-45 shadow-2xl cursor-pointer">
-              <img 
-                src="/13.jpg" 
-                alt="LEDream installation" 
-                className="w-32 sm:w-36 md:w-40 lg:w-44 h-auto rounded-sm border-2 border-neutral-white/20 hover:border-neutral-white/40 transition-colors"
-              />
-            </div>
-          </div>
+        {/* Image Carousel */}
+        <div className="mt-16">
+          <ImageCarousel
+            images={[
+              "/3.jpg",
+              "/5.JPG",
+              "/6.JPG",
+              "/7.JPG",
+              "/8.JPG",
+              "/10.JPG",
+              "/11.JPG",
+              "/1.JPG",
+            ]}
+          />
         </div>
       </SectionContainer>
 
