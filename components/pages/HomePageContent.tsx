@@ -179,7 +179,7 @@ export function HomePageContent() {
       </SectionContainer>
 
       {/* Video Showcase Section */}
-      <SectionContainer variant="dark">
+      <SectionContainer variant="dark" padding="pt-0 md:pt-2 lg:pt-4 pb-16 md:pb-24 lg:pb-32">
         <div className="text-center mb-12">
           <NeonText
             text="See Our Work Come to Life"
