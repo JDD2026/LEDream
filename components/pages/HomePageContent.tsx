@@ -149,13 +149,13 @@ export function HomePageContent() {
           <div className="flex items-center justify-center h-16 w-32 bg-dark-brick border border-neon-magenta/20 rounded px-4 hover:border-neon-magenta hover:shadow-neon-magenta transition-all">
             <span className="text-neutral-white/60 text-sm font-semibold">Jester's Wondrous Funhouse</span>
           </div>
-          <div className="flex items-center justify-center h-16 w-32 bg-dark-brick border border-neon-magenta/20 rounded px-4 hover:border-neon-magenta hover:shadow-neon-magenta transition-all">
+          <div className="flex items-center justify-center h-16 w-32 bg-dark-brick border border-neon-green/20 rounded px-4 hover:border-neon-green hover:shadow-neon-green transition-all">
             <span className="text-neutral-white/60 text-sm font-semibold">Central Mix</span>
           </div>
-          <div className="flex items-center justify-center h-16 w-32 bg-dark-brick border border-neon-magenta/20 rounded px-4 hover:border-neon-magenta hover:shadow-neon-magenta transition-all">
+          <div className="flex items-center justify-center h-16 w-32 bg-dark-brick border border-neon-blue/20 rounded px-4 hover:border-neon-blue hover:shadow-neon-blue transition-all">
             <span className="text-neutral-white/60 text-sm font-semibold">Rev Underground</span>
           </div>
-          <div className="flex items-center justify-center h-16 w-32 bg-dark-brick border border-neon-magenta/20 rounded px-4 hover:border-neon-magenta hover:shadow-neon-magenta transition-all">
+          <div className="flex items-center justify-center h-16 w-32 bg-dark-brick border border-neon-purple/20 rounded px-4 hover:border-neon-purple hover:shadow-neon-magenta transition-all">
             <span className="text-neutral-white/60 text-sm font-semibold">Fountain Room @ Pourhouse</span>
           </div>
         </div>
