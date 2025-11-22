@@ -71,7 +71,7 @@ export function Header() {
         <div className="flex h-16 md:h-20 items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Logo size="md" />
+            <Logo size="xl" />
           </div>
 
           {/* Desktop Navigation */}

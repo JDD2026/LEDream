@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 interface LogoProps {
   className?: string;
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg" | "xl";
 }
 
 /**
@@ -23,6 +23,7 @@ export function Logo({ className, size = "md" }: LogoProps) {
     sm: "h-[30px] w-auto",
     md: "h-[40px] md:h-[50px] w-auto",
     lg: "h-[50px] md:h-[60px] w-auto",
+    xl: "h-[60px] md:h-[80px] w-auto",
   };
 
   const handleVideoError = () => {
