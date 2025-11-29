@@ -54,9 +54,6 @@ export function ProcessTimeline({ steps, className }: ProcessTimelineProps) {
       {/* Desktop: Horizontal Timeline */}
       <div className="hidden lg:block">
         <div className="relative">
-          {/* Connecting Line */}
-          <div className="absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-neon-blue via-neon-purple to-neon-magenta opacity-30" />
-          
           <div className="grid grid-cols-3 gap-8 relative z-10">
             {steps.map((step, index) => {
               const Icon = iconMap[step.icon];
@@ -184,32 +181,6 @@ export function ProcessTimeline({ steps, className }: ProcessTimelineProps) {
                         </div>
                       )}
                     </div>
-
-                    {/* Connection Point Indicator */}
-                    {!isLast && (
-                      <div className="absolute -right-4 top-24 z-20">
-                        <div
-                          className={cn(
-                            "h-3 w-3 rounded-full border-2",
-                            color === "blue" && "bg-neon-blue border-neon-blue",
-                            color === "purple" && "bg-neon-purple border-neon-purple",
-                            color === "magenta" && "bg-neon-magenta border-neon-magenta"
-                          )}
-                        />
-                      </div>
-                    )}
-
-                    {/* End Marker for Last Step */}
-                    {isLast && (
-                      <div className="absolute -right-4 top-24 z-20">
-                        <CheckCircle2
-                          className={cn(
-                            "h-6 w-6",
-                            color === "magenta" && "text-neon-magenta"
-                          )}
-                        />
-                      </div>
-                    )}
                   </div>
                 </FadeInOnScroll>
               );
