@@ -222,22 +222,16 @@ export function AboutPageContent() {
           <FadeInOnScroll delay={0}>
             <div className="bg-dark-brick border-2 border-neon-blue/30 rounded-lg p-8 md:p-12 shadow-neon-blue/20">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                {/* Photo Placeholder */}
+                {/* Photo */}
                 <div className="flex justify-center md:justify-start">
                   <div className="relative w-64 h-64 md:w-80 md:h-80">
-                    <div className="absolute inset-0 bg-gradient-to-br from-neon-blue/20 via-neon-purple/20 to-neon-magenta/20 rounded-full border-4 border-neon-blue/50 flex items-center justify-center">
-                      <div className="text-center">
-                        <Diamond className="h-16 w-16 text-neon-blue mx-auto mb-4" />
-                        <p className="text-neutral-white/60 text-sm">Photo Coming Soon</p>
-                      </div>
-                    </div>
-                    {/* Replace with actual image when available */}
-                    {/* <Image
-                      src="/team/jester-dapper-dan.jpg"
+                    <Image
+                      src="/JDD.jpg"
                       alt={teamMember.name}
                       fill
                       className="object-cover rounded-full border-4 border-neon-blue/50"
-                    /> */}
+                      style={{ objectPosition: 'center 35%' }}
+                    />
                   </div>
                 </div>
 
