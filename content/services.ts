@@ -135,11 +135,6 @@ export const faqItems = [
     answer:
       "Yes! All packages include initial training and support. The Legend package includes dedicated ongoing service and maintenance. For Spark and Spectacle packages, we offer support packages and maintenance services to ensure your installation continues to shine.",
   },
-  {
-    question: "Can I see examples of each package level?",
-    answer:
-      "Absolutely! We'd love to show you our portfolio and discuss specific examples that match your vision. During your free consultation, we'll share case studies and examples relevant to your space and goals.",
-  },
 ];
 
 /**

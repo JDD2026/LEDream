@@ -163,8 +163,7 @@ export function ServicesPageContent() {
           {/* Subheadline */}
           <FadeInOnScroll delay={100}>
             <p className="text-lg md:text-xl lg:text-2xl text-neutral-white/90 max-w-3xl mx-auto leading-relaxed mb-6">
-              Are you ready to begin crafting magic? We offer custom-tailored experiences to transform your vision into reality.
-            </p>
+            Are you ready to begin crafting magic? We offer custom-tailored experiences to transform your vision to reality, from permanent to temporary installations.            </p>
           </FadeInOnScroll>
 
           {/* Brief Intro */}

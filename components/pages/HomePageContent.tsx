@@ -29,7 +29,6 @@ import { PackageCard } from "@/components/sections/PackageCard";
 import { ProjectCard } from "@/components/sections/ProjectCard";
 import { TestimonialCard } from "@/components/sections/TestimonialCard";
 import { IconFeature } from "@/components/ui/IconFeature";
-import { VideoEmbed } from "@/components/ui/VideoEmbed";
 import { VideoBackground } from "@/components/ui/VideoBackground";
 import { ImageCarousel } from "@/components/ui/ImageCarousel";
 import {
@@ -190,11 +189,20 @@ export function HomePageContent() {
           />
         </div>
         <div className="max-w-5xl mx-auto mb-8">
-          <VideoEmbed
-            videoUrl="https://youtu.be/Rl8RiOAwhac"
-            title="Psychedelic Funhouse Fantasy - LEDream Installation"
-            lazy
-          />
+          <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-neon-blue/30 shadow-neon-blue/20 transition-all duration-normal hover:border-neon-blue hover:shadow-neon-blue">
+            <video
+              src="/Psychedelic Funhouse.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+              preload="auto"
+              title="Psychedelic Funhouse Fantasy - LEDream Installation"
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
         <p className="text-center text-neutral-white/70 max-w-2xl mx-auto mb-6">
           Experience the transformation of an unremarkable living room into an out-of-this-world wonderland
