@@ -34,23 +34,23 @@ export const siteMetadata: PageMetadata = {
 export const contactInfo = {
   phone: "651-210-7253",
   email: "jesterdapperdan@gmail.com",
-  consultationForm: "https://tally.so/forms/pbxL7q",
+  consultationForm: "https://tally.so/r/b5ZZE7",
 } as const;
 
 export const socialLinks: SocialLink[] = [
   {
     platform: "instagram",
-    url: "https://instagram.com/ledream", // Placeholder
+    url: "https://www.instagram.com/afterglow_mpls/",
     label: "Visit LEDream on Instagram",
   },
   {
     platform: "facebook",
-    url: "https://facebook.com/ledream", // Placeholder
+    url: "https://www.facebook.com/AfterGlow.Mpls",
     label: "Visit LEDream on Facebook",
   },
   {
     platform: "youtube",
-    url: "https://youtube.com/@ledream", // Placeholder
+    url: "https://youtube.com/@afterglow_mpls?si=MXpSfPTqwWTahCZH",
     label: "Visit LEDream on YouTube",
   },
   {

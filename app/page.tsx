@@ -42,9 +42,9 @@ export default function Home() {
               email: contactInfo.email,
             },
             sameAs: [
-              "https://instagram.com/ledream",
-              "https://facebook.com/ledream",
-              "https://youtube.com/@ledream",
+              "https://www.instagram.com/afterglow_mpls/",
+              "https://www.facebook.com/AfterGlow.Mpls",
+              "https://youtube.com/@afterglow_mpls?si=MXpSfPTqwWTahCZH",
             ],
           }),
         }}

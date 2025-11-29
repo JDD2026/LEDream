@@ -62,7 +62,7 @@ export interface CTAButtonProps extends Omit<ButtonProps, "variant" | "size"> {
  * ```tsx
  * <CTAButton 
  *   text="Book Consultation" 
- *   href="https://tally.so/forms/pbxL7q"
+ *   href="https://tally.so/r/b5ZZE7"
  *   variant="primary"
  *   external
  *   icon={ArrowRight}

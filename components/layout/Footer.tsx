@@ -22,19 +22,19 @@ const navigationLinks = [
 const socialLinks = [
   {
     name: "Instagram",
-    href: "https://instagram.com/ledream",
+    href: "https://www.instagram.com/afterglow_mpls/",
     icon: Instagram,
     ariaLabel: "Visit LEDream on Instagram",
   },
   {
     name: "Facebook",
-    href: "https://facebook.com/ledream",
+    href: "https://www.facebook.com/AfterGlow.Mpls",
     icon: Facebook,
     ariaLabel: "Visit LEDream on Facebook",
   },
   {
     name: "YouTube",
-    href: "https://youtube.com/@ledream",
+    href: "https://youtube.com/@afterglow_mpls?si=MXpSfPTqwWTahCZH",
     icon: Youtube,
     ariaLabel: "Visit LEDream on YouTube",
   },
@@ -46,7 +46,7 @@ const socialLinks = [
   },
 ];
 
-const CONSULTATION_URL = "https://tally.so/forms/pbxL7q";
+const CONSULTATION_URL = "https://tally.so/r/b5ZZE7";
 
 /**
  * Footer Component

@@ -18,7 +18,7 @@ const navigationItems = [
   { name: "Contact", href: "/contact" },
 ];
 
-const CONSULTATION_URL = "https://tally.so/forms/pbxL7q";
+const CONSULTATION_URL = "https://tally.so/r/b5ZZE7";
 
 /**
  * Header/Navigation Component

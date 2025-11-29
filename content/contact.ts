@@ -54,7 +54,7 @@ export const contactPageInfo = {
  * Consultation Form
  */
 export const consultationForm = {
-  url: "https://tally.so/forms/pbxL7q",
+  url: "https://tally.so/r/b5ZZE7",
   text: "Book Consultation",
   description: "Fill out our consultation form to get started",
 } as const;

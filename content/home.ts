@@ -28,7 +28,7 @@ export const heroContent: HeroContent = {
   subheadline:
     "We're dream-weavers, reality-shifters and experts of psychedelic fantasy. We transform any space into a living art masterpiece.",
   ctaText: "Begin Your Journey",
-  ctaHref: "https://tally.so/forms/pbxL7q",
+  ctaHref: "https://tally.so/r/b5ZZE7",
 };
 
 /**
