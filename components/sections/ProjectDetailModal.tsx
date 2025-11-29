@@ -238,6 +238,18 @@ export function ProjectDetailModal({
             <p className="text-neutral-white/80 leading-relaxed text-base md:text-lg">
               {project.description}
             </p>
+            {/* External Link */}
+            {project.externalLink && (
+              <div className="mt-6">
+                <CTAButton
+                  text={project.externalLinkLabel || "View Gallery"}
+                  href={project.externalLink}
+                  external
+                  variant="secondary"
+                  size="md"
+                />
+              </div>
+            )}
           </div>
 
           {/* Image Gallery */}

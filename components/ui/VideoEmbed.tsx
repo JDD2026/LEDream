@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 export interface VideoEmbedProps {
   /**
-   * YouTube video URL or ID
+   * YouTube video URL, local video file path, or video ID
    */
   videoUrl: string;
   /**
@@ -31,7 +31,8 @@ export interface VideoEmbedProps {
 /**
  * VideoEmbed Component
  * 
- * YouTube video embed wrapper with responsive 16:9 aspect ratio and neon border.
+ * Video embed wrapper supporting YouTube videos and local video files
+ * with responsive 16:9 aspect ratio and neon border.
  * 
  * @example
  * ```tsx
@@ -39,6 +40,10 @@ export interface VideoEmbedProps {
  *   videoUrl="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
  *   title="Project Video"
  *   lazy
+ * />
+ * <VideoEmbed 
+ *   videoUrl="/video.mp4"
+ *   title="Local Video"
  * />
  * ```
  */
@@ -87,13 +92,43 @@ export function VideoEmbed({
     );
   }
 
-  const videoId = getYouTubeId(videoUrl);
+  // Check if it's a local video file (starts with /)
+  const isLocalVideo = videoUrl.startsWith("/");
+  
+  // Extract YouTube video ID from URL
+  const videoId = !isLocalVideo ? getYouTubeId(videoUrl) : null;
   const embedUrl = videoId
     ? `https://www.youtube.com/embed/${videoId}`
     : null;
   const thumbnailUrl =
     thumbnail || (videoId ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg` : null);
 
+  // Handle local video files
+  if (isLocalVideo) {
+    return (
+      <div
+        className={cn(
+          "relative aspect-video rounded-lg overflow-hidden",
+          "border-2 border-neon-blue/30 shadow-neon-blue/20",
+          "transition-all duration-normal hover:border-neon-blue hover:shadow-neon-blue",
+          className
+        )}
+      >
+        <video
+          src={videoUrl}
+          title={title}
+          controls
+          className="w-full h-full object-contain"
+          preload={lazy ? "metadata" : "auto"}
+          onLoadedData={() => setIsLoaded(true)}
+        >
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    );
+  }
+
+  // Handle YouTube videos
   if (!embedUrl) {
     return (
       <div

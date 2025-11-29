@@ -61,6 +61,8 @@ export interface Project {
   featured: boolean;
   client?: string;
   location?: string;
+  externalLink?: string;
+  externalLinkLabel?: string;
 }
 
 /**

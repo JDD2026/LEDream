@@ -1,62 +1,21 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Script from "next/script";
 import { GradientBackground } from "@/components/animations/GradientBackground";
 import { NeonText } from "@/components/animations/NeonText";
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { ProjectGrid } from "@/components/sections/ProjectGrid";
-import { ProjectDetailModal } from "@/components/sections/ProjectDetailModal";
 import { CTAButton } from "@/components/ui/CTAButton";
 import { VideoBackground } from "@/components/ui/VideoBackground";
 import { portfolioMetadata, projects, galleryIntro } from "@/content/portfolio";
-import { contactInfo, siteConfig } from "@/content/site";
-import type { Project } from "@/content/types";
+import { contactInfo } from "@/content/site";
 
 /**
  * Portfolio Page
  * 
- * Displays LEDream's project gallery with filtering, detailed modals,
- * and call-to-action sections.
+ * Displays LEDream's project gallery with filtering and call-to-action sections.
  */
 export default function PortfolioPage() {
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  // Handle project navigation from modal
-  useEffect(() => {
-    const handleNavigateProject = (event: CustomEvent<{ projectId: string }>) => {
-      const project = projects.find((p) => p.id === event.detail.projectId);
-      if (project) {
-        setSelectedProject(project);
-      }
-    };
-
-    window.addEventListener(
-      "navigateProject",
-      handleNavigateProject as EventListener
-    );
-
-    return () => {
-      window.removeEventListener(
-        "navigateProject",
-        handleNavigateProject as EventListener
-      );
-    };
-  }, []);
-
-  const handleProjectClick = (project: Project) => {
-    setSelectedProject(project);
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-    // Small delay before clearing project to allow exit animation
-    setTimeout(() => {
-      setSelectedProject(null);
-    }, 300);
-  };
 
   // Build structured data for portfolio
   const portfolioStructuredData = {
@@ -123,7 +82,6 @@ export default function PortfolioPage() {
       <SectionContainer variant="dark" className="py-16 md:py-24">
         <ProjectGrid
           projects={projects}
-          onProjectClick={handleProjectClick}
           loading={false}
         />
       </SectionContainer>
@@ -161,14 +119,6 @@ export default function PortfolioPage() {
           </div>
         </div>
       </section>
-
-      {/* Project Detail Modal */}
-      <ProjectDetailModal
-        project={selectedProject}
-        allProjects={projects}
-        open={isModalOpen}
-        onClose={handleCloseModal}
-      />
     </>
   );
 }

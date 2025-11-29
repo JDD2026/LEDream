@@ -20,10 +20,6 @@ export interface ProjectGridProps {
    */
   loading?: boolean;
   /**
-   * Callback when a project is clicked
-   */
-  onProjectClick?: (project: Project) => void;
-  /**
    * Additional CSS classes
    */
   className?: string;
@@ -46,7 +42,6 @@ export interface ProjectGridProps {
 export function ProjectGrid({
   projects,
   loading = false,
-  onProjectClick,
   className,
 }: ProjectGridProps) {
   const [activeFilter, setActiveFilter] = useState<ProjectCategory>("all");
@@ -131,14 +126,14 @@ export function ProjectGrid({
         </div>
       ) : (
         <div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch"
           role="list"
         >
           {filteredProjects.map((project, index) => (
             <div
               key={project.id}
               role="listitem"
-              className="animate-fade-in"
+              className="animate-fade-in h-full"
               style={{
                 animationDelay: `${index * 50}ms`,
                 animationFillMode: "both",
@@ -146,7 +141,6 @@ export function ProjectGrid({
             >
               <ProjectCard
                 project={project}
-                onClick={() => onProjectClick?.(project)}
               />
             </div>
           ))}

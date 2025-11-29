@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { ExternalLink } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ExternalLink, Play } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Project as PortfolioProject } from "@/content/types";
 
@@ -27,10 +26,6 @@ export interface ProjectCardProps {
    * Additional CSS classes
    */
   className?: string;
-  /**
-   * Click handler
-   */
-  onClick?: () => void;
 }
 
 /**
@@ -54,7 +49,6 @@ export interface ProjectCardProps {
 export function ProjectCard({
   project,
   className,
-  onClick,
 }: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -69,21 +63,49 @@ export function ProjectCard({
       ? project.category.charAt(0).toUpperCase() + project.category.slice(1)
       : project.category;
 
+  // Check if video URL is YouTube (not local file)
+  const getYouTubeUrl = (videoUrl?: string): string | null => {
+    if (!videoUrl || videoUrl.startsWith("/") || videoUrl === "TBD") {
+      return null;
+    }
+    // Extract YouTube video ID
+    const regExp =
+      /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+    const match = videoUrl.match(regExp);
+    if (match && match[2] && match[2].length === 11) {
+      return `https://www.youtube.com/watch?v=${match[2]}`;
+    }
+    // If it's already a YouTube URL, return as is
+    if (videoUrl.includes("youtube.com") || videoUrl.includes("youtu.be")) {
+      return videoUrl;
+    }
+    return null;
+  };
+
+  const youtubeUrl = isPortfolioProject && "videoUrl" in project
+    ? getYouTubeUrl(project.videoUrl)
+    : null;
+  const externalLink = isPortfolioProject && "externalLink" in project
+    ? project.externalLink
+    : null;
+  const externalLinkLabel = isPortfolioProject && "externalLinkLabel" in project
+    ? project.externalLinkLabel || "View Gallery"
+    : "View Gallery";
+
   return (
     <div
       className={cn(
         "group bg-dark-brick rounded-lg overflow-hidden",
         "transition-all duration-normal",
         "hover:scale-[1.02] hover:shadow-lg hover:-translate-y-1",
-        onClick && "cursor-pointer",
+        "flex flex-col h-full",
         className
       )}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onClick={onClick}
     >
       {/* Image Container */}
-      <div className="relative aspect-video overflow-hidden bg-dark-navy">
+      <div className="relative aspect-video overflow-hidden bg-dark-navy flex-shrink-0">
         <Image
           src={imageSrc}
           alt={imageAlt || project.title}
@@ -107,33 +129,42 @@ export function ProjectCard({
             {categoryDisplay}
           </span>
         </div>
-        {/* View Details Button (appears on hover) */}
-        <div
-          className={cn(
-            "absolute inset-0 flex items-center justify-center z-10",
-            "bg-dark-black/60 backdrop-blur-sm",
-            "transition-opacity duration-normal",
-            isHovered ? "opacity-100" : "opacity-0"
-          )}
-        >
-          <Button
-            variant="outline"
-            className="border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-dark-black"
-          >
-            <ExternalLink className="h-4 w-4 mr-2" />
-            View Details
-          </Button>
-        </div>
       </div>
 
       {/* Content */}
-      <div className="p-6">
+      <div className="p-6 flex-1 flex flex-col min-h-0">
         <h3 className="text-h4 text-neutral-white font-heading mb-2">
           {project.title}
         </h3>
-        <p className="text-neutral-white/70 text-sm line-clamp-2">
+        <p className="text-neutral-white/70 text-sm line-clamp-2 mb-4">
           {project.description}
         </p>
+        
+        {/* Action Buttons */}
+        <div className="flex flex-col gap-2 mt-auto">
+          {youtubeUrl && (
+            <a
+              href={youtubeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md text-sm font-semibold transition-all duration-normal border-2 border-neon-blue/30 hover:border-neon-blue bg-transparent text-neon-blue hover:bg-neon-blue hover:text-dark-black"
+            >
+              <Play className="h-4 w-4" />
+              Watch Video
+            </a>
+          )}
+          {externalLink && (
+            <a
+              href={externalLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md text-sm font-semibold transition-all duration-normal border-2 border-neon-blue/30 hover:border-neon-blue bg-transparent text-neon-blue hover:bg-neon-blue hover:text-dark-black"
+            >
+              <ExternalLink className="h-4 w-4" />
+              {externalLinkLabel}
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );
