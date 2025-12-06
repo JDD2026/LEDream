@@ -28,6 +28,7 @@ const CONSULTATION_URL = "https://tally.so/r/b5ZZE7";
 export function Header() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,6 +46,8 @@ export function Header() {
         element.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     }
+    // Close mobile menu when navigation link is clicked
+    setIsMobileMenuOpen(false);
   };
 
   const isActive = (href: string) => {
@@ -124,7 +127,7 @@ export function Header() {
             </Button>
 
             {/* Mobile Menu */}
-            <Sheet>
+            <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild className="lg:hidden">
                 <Button
                   variant="ghost"

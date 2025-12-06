@@ -1,5 +1,3 @@
-"use client";
-
 import Script from "next/script";
 import { GradientBackground } from "@/components/animations/GradientBackground";
 import { NeonText } from "@/components/animations/NeonText";
