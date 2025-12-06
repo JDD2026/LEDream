@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import type { Project } from "@/content/types";
 import { Diamond } from "lucide-react";
 
-export type ProjectCategory = "all" | "residential" | "commercial" | "event";
+export type ProjectCategory = "all" | "residential" | "commercial";
 
 export interface ProjectGridProps {
   /**
@@ -47,10 +47,9 @@ export function ProjectGrid({
   const [activeFilter, setActiveFilter] = useState<ProjectCategory>("all");
 
   const categories: { value: ProjectCategory; label: string }[] = [
-    { value: "all", label: "All" },
+    { value: "all", label: "All Events" },
     { value: "residential", label: "Residential" },
     { value: "commercial", label: "Commercial" },
-    { value: "event", label: "Events" },
   ];
 
   const filteredProjects = useMemo(() => {
