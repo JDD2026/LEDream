@@ -82,7 +82,7 @@ export function NeonText({
         colorClasses[color],
         intensityClasses[intensity],
         animated && "animate-glow-pulse-slow",
-        animated && "will-change-[text-shadow] transform-gpu",
+        animated && "will-change-[text-shadow] gpu-accelerated",
         "transition-all duration-normal",
         className
       )}

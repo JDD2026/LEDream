@@ -70,6 +70,13 @@ export function NeonCard({
     green: "border-neon-green shadow-neon-green",
   };
 
+  const iconColorClasses = {
+    blue: "text-neon-blue",
+    purple: "text-neon-purple",
+    magenta: "text-neon-magenta",
+    green: "text-neon-green",
+  };
+
   return (
     <div
       className={cn(
@@ -84,7 +91,7 @@ export function NeonCard({
     >
       {Icon && (
         <div className="mb-4">
-          <Icon className="h-8 w-8 text-neon-blue" />
+          <Icon className={cn("h-8 w-8", iconColorClasses[variant])} />
         </div>
       )}
       {title && (

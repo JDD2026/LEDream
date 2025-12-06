@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -114,9 +114,11 @@ export function ContactForm({ className }: ContactFormProps) {
 
   // Watch message field for character counter
   const messageValue = watch("message");
-  if (messageValue && messageValue.length !== messageLength) {
-    setMessageLength(messageValue.length);
-  }
+  
+  // Update messageLength when message value changes
+  useEffect(() => {
+    setMessageLength(messageValue?.length || 0);
+  }, [messageValue]);
 
   const onSubmit = async (data: ContactFormData) => {
     // Check honeypot field
@@ -392,11 +394,7 @@ export function ContactForm({ className }: ContactFormProps) {
                   ? "message-counter"
                   : undefined
             }
-            {...register("message", {
-              onChange: (e) => {
-                setMessageLength(e.target.value.length);
-              },
-            })}
+            {...register("message")}
           />
           <div className="flex justify-between items-center">
             {errors.message ? (
