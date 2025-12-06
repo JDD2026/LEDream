@@ -1,16 +1,9 @@
-import { cn } from "@/lib/utils";
-import { ExternalLinkButton } from "@/components/ui/ExternalLinkButton";
-
-interface ContactFormProps {
-  className?: string;
-}
-
 /**
  * ContactForm Component
  * 
  * Embeds the Tally consultation form in an iframe.
  */
-export function ContactForm({ className }: ContactFormProps) {
+export function ContactForm() {
   return (
     <div>
       <h3 className="text-h3 text-neutral-white mb-6 font-heading">
