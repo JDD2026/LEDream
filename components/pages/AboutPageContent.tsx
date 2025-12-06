@@ -109,20 +109,17 @@ export function AboutPageContent() {
 
           {/* Right Column: Image or Decorative Element */}
           <FadeInOnScroll delay={200}>
-            <div className="relative aspect-square max-w-md mx-auto lg:mx-0">
-              <div className="absolute inset-0 bg-gradient-to-br from-neon-blue/20 via-neon-purple/20 to-neon-magenta/20 rounded-lg border-2 border-neon-blue/30 p-8 flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <div className="text-6xl font-black text-neon-blue/50">2024</div>
-                  <p className="text-neutral-white/60 text-sm">The Beginning</p>
-                </div>
+            <div className="flex justify-center lg:justify-start w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto lg:mx-0">
+              <div className="relative w-full inline-block">
+                <Image
+                  src="/5.JPG"
+                  alt="LEDream Origin"
+                  width={800}
+                  height={800}
+                  className="w-full h-auto rounded-lg border-2 border-neon-blue/30"
+                  sizes="(max-width: 640px) 90vw, (max-width: 768px) 80vw, (max-width: 1024px) 50vw, 600px"
+                />
               </div>
-              {/* Placeholder for client photo - replace with actual image */}
-              {/* <Image
-                src="/team/jester-dapper-dan.jpg"
-                alt="LEDream Origin"
-                fill
-                className="object-cover rounded-lg border-2 border-neon-blue/30"
-              /> */}
             </div>
           </FadeInOnScroll>
         </div>
