@@ -83,13 +83,13 @@ export function AboutPageContent() {
           <FadeInOnScroll delay={0}>
             <div className="space-y-6">
               <p className="text-lg md:text-xl text-neutral-white/90 leading-relaxed">
-                LEDream was born in late 2024 from a daring desire: to transform an ordinary space into an extraordinary one.
+                LEDream was born in late 2024 from a daring vision: to transform an ordinary space into an extraordinary one.
               </p>
               <p className="text-base md:text-lg text-neutral-white/80 leading-relaxed">
                 {originStoryText.story}
               </p>
               <p className="text-base md:text-lg text-neutral-white/80 leading-relaxed">
-                Through two unforgettable founding shows, we discovered our craft—the art of weaving light, color, and imagination into immersive experiences that leave guests in awe. Each installation taught us something new about the power of LED art to transport people to otherworldly realms.
+                After several unforgettable experiences, we discovered our craft—the art of weaving light, color, and imagination into immersive atmospheres that leave guests in awe. Each installation taught us something new about the power of LED & art to transport people to otherworldly realms.
               </p>
               <p className="text-base md:text-lg text-neutral-white/80 leading-relaxed">
                 What started as an experiment in transforming spaces has evolved into a passion for creating living art masterpieces. We learned that every pixel matters, every color choice tells a story, and every installation is an opportunity to craft something truly magical.
