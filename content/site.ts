@@ -32,7 +32,7 @@ export const siteMetadata: PageMetadata = {
 };
 
 export const contactInfo = {
-  phone: "651-210-7253"'
+  phone: "651-210-7253",
   email: "portal@ledream.art",
   consultationForm: "https://tally.so/r/b5ZZE7",
 } as const;
