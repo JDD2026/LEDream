@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Header, Footer } from "@/components/layout";
 import "./globals.css";
 
@@ -55,6 +56,7 @@ export default function RootLayout({
         <Header />
         <main className="pt-16 md:pt-20">{children}</main>
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
