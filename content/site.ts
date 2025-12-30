@@ -18,7 +18,7 @@ export const siteConfig = {
 export const siteMetadata: PageMetadata = {
   title: "LEDream - Where Modern Art & Life Become One",
   description:
-    "Transform any space into a living art masterpiece through cutting-edge LED art, immersive design & psychedelic fantasy. Custom LED installations for residential, commercial, and event spaces.",
+    "Transform any space into a living art masterpiece through cutting-edge LED art, immersive design & psychedelic fantasy. Custom LED installations for residential, commercial, and event spaces.[...]",
   keywords: [
     "LED art",
     "LED installation",
@@ -37,21 +37,9 @@ export const contactInfo = {
   consultationForm: "https://tally.so/r/b5ZZE7",
 } as const;
 
-export const socialLinks: SocialLink[] = [
-  {
-    platform: "instagram",
-    url: "https://www.instagram.com/afterglow_mpls/",
-    label: "Visit LEDream on Instagram",
-  },
-  {
-    platform: "facebook",
-    url: "https://www.facebook.com/AfterGlow.Mpls",
-    label: "Visit LEDream on Facebook",
-  },
-  {
-    platform: "youtube",
-    url: "https://youtube.com/@afterglow_mpls?si=MXpSfPTqwWTahCZH",
-    label: "Visit LEDream on YouTube",
-  },
-];
-
+/**
+ * NOTE: social link URLs previously pointed to AfterGlow accounts.
+ * Per instructions, these have been removed so no incorrect/blank links render.
+ * Replace with real LEDream profile URLs when available.
+ */
+export const socialLinks: SocialLink[] = [];
