@@ -8,15 +8,18 @@ import type { PageMetadata, Package } from "./types";
  */
 
 export const servicesMetadata: PageMetadata = {
-  title: "Services - LEDream Custom LED Installations",
+  title: "LED Lighting Installation & Design Services | LEDream Minneapolis–Saint Paul",
   description:
-    "Are you ready to begin crafting magic? We offer custom-tailored LED installation experiences. Choose from The Spark, The Spectacle, or The Legend packages.",
+    "Professional LED lighting design and installation services in Minneapolis–Saint Paul. LEDream specializes in custom LED installations, immersive lighting environments, and artistic LED transformations for homes, events, and creative spaces across the Twin Cities.",
   keywords: [
-    "LED installation services",
-    "custom LED art",
-    "LED packages",
-    "immersive lighting",
-    "LED design services",
+  "LED lighting installation",
+  "LED lighting design services",
+  "custom LED installation Minneapolis",
+  "Twin Cities LED lighting",
+  "residential LED lighting",
+  "event LED lighting installation",
+  "immersive LED lighting",
+  "psychedelic art installations"
   ],
 };
 
