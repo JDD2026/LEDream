@@ -26,9 +26,9 @@ export const homeMetadata: PageMetadata = {
  * Hero Section Content
  */
 export const heroContent: HeroContent = {
-  headline: "Where Modern Art & Life Become One",
+  headline: "Welcome to LEDream - Where Modern Art & Life Become One",
   subheadline:
-    "Immersive fantasy LED lighting & psychedelic art installations in Mpls. We're dream-weavers, reality-shifters and experts of psychedelic fantasy. We transform any space into a living art masterpiece.",
+    "Transform Your Space Into a Living Art Masterpiece. Immersive fantasy LED lighting & psychedelic art installations for homes, events and commercial spaces. We're dream-weavers, reality-shifters and experts of cutting-edge technology.",
   ctaText: "Begin Your Journey",
   ctaHref: "https://tally.so/r/b5ZZE7",
 };
