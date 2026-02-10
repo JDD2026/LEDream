@@ -28,8 +28,7 @@ export const homeMetadata: PageMetadata = {
 export const heroContent: HeroContent = {
   headline: "Welcome to LEDream - Where Modern Art & Life Become One",
   subheadline:
-  "Transform Your Space Into a Living Art Masterpiece. " + 
-  "Immersive fantasy LED lighting & psychedelic art installations for homes, events and commercial spaces. " + 
+  "Transform your space into a living art masterpiece with our immersive LED lighting & psychedelic art installations for homes, events and commercial spaces.\n" +
   "We're dream-weavers, reality-shifters and experts of cutting-edge technology.",
   ctaText: "Begin Your Journey",
   ctaHref: "https://tally.so/r/b5ZZE7",
