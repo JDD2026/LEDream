@@ -8,15 +8,17 @@ import type { HeroContent, Project, Package, PageMetadata } from "./types";
  */
 
 export const homeMetadata: PageMetadata = {
-  title: "LEDream - Where Modern Art & Life Become One",
+  title: "LEDream | Custom LED Lighting Design & Installation in Minneapolis–Saint Paul",
   description:
-    "Immersive fantasy LED lighting & psychedelic art installations in Minneapolis-Saint Paul.",
+    "Custom LED lighting design and installation in Minneapolis–Saint Paul. LEDream creates immersive LED, psychedelic art, lighting transformations, and atmosphere-enhancing LED installations for homes, events, and creative spaces in the Twin Cities.",
   keywords: [
-    "LED art",
-    "LED installation",
-    "immersive design",
-    "psychedelic fantasy",
-    "custom lighting",
+  "LED lighting design",
+  "LED lighting installation",
+  "Minneapolis Twin Cities LED",
+  "custom psychedelic art",
+  "LED ambiance lighting",
+  "residential LED lighting",
+  "event LED installation"
   ],
 };
 
